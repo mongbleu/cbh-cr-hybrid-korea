@@ -1,0 +1,13 @@
+KS Test,,,
+Perfect,Weak,Moderate,Strong
+0,0.2,0.4,1
+Wasserstein,,,
+Perfect,Weak,Moderate,Strong
+0,0.1,0.3,0.5
+0,2.85,8.55,14.25
+JS Divergence,,,
+Perfect,Weak,Moderate,Strong
+0,0.1,0.3,1
+Data range (NFI),28.5,,
+min,0.3,,
+max,28.8,,

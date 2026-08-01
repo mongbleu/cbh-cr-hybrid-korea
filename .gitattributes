@@ -1,0 +1,10 @@
+# Git LFS tracking for redistributable binaries (activated at release; harmless if LFS absent).
+# Bulky raw rasters/data are gitignored, not LFS-tracked — see .gitignore and rules/reproducibility.md.
+*.shp  filter=lfs diff=lfs merge=lfs -text
+*.dbf  filter=lfs diff=lfs merge=lfs -text
+*.shx  filter=lfs diff=lfs merge=lfs -text
+*.sbn  filter=lfs diff=lfs merge=lfs -text
+*.sbx  filter=lfs diff=lfs merge=lfs -text
+
+# Treat notebooks as text for diffing.
+*.ipynb  text

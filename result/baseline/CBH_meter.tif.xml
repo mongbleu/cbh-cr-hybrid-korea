@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="ko"><Esri><CreaDate>20250404</CreaDate><CreaTime>01282700</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files\arcgis\pro\Resources\ArcToolbox\toolboxes\Spatial Analyst Tools.tbx\RasterCalculator" Date="20250404" Time="012827">RasterCalculator " "CBH.tif"  * 0.328084" D:\ForestFire\CBH\result\CBH_meter.tif</Process></lineage></DataProperties></Esri></metadata>

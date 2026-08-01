@@ -1,0 +1,15 @@
+name: ctgan-cleaner
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - jupyterlab=4.0
+  - notebook
+  - ipykernel
+  - pip:
+      - pandas
+      - numpy==1.23
+      - scikit-learn
+      - sdv==1.24.0
