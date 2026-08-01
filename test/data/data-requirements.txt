@@ -1,0 +1,27 @@
+# Inputs required to run the CBH-CR pipeline / test slice.
+# Legend:  [INCLUDED] shipped in this repo  ·  [OBTAIN] NOT redistributable — get from the source
+# (see README.md "Data availability"). Place obtained files under test/data/ (or data/) as named.
+
+<Table>  (modeling inputs)
+[INCLUDED] 대체수종표 (species substitution)     Alternative_Species_Model.csv
+[OBTAIN]   NFI 6·7차 임목정리표 (filtered)        NFI6-7-Immok-Filtered.xlsx      # was mislabeled .csv
+[OBTAIN]   Cleaned modeling table (NFI-derived)   NFI-Integrated(6-7)-cleaned.csv
+           # ^ the table the model scripts consume. Required columns (units):
+           #   SID(species id, int)  SampleID(plot key = 표본점번호)  Cycle(6/7)
+           #   DBH(inch)  H(ft)  CR(0–1, target)  CBH(ft, observed 지하고)
+           #   CD(%)  Elev(hm)  Slope(tan)  Azimuth(rad)  Lat  Long
+
+<Raster>  (mapping inputs — stage ⑤ only; EPSG:5179; archived, not in repo)
+[OBTAIN]   DEM                                    DEM_merge_5179.tif
+[OBTAIN]   Slope                                  Slope_rad_5179.tif
+[OBTAIN]   Aspect                                 Aspect_5179.tif
+[OBTAIN]   Height (sampled)                       Clip_HEIGHT_sampled.tif
+[OBTAIN]   DBH class (sampled)                    Clip_DMCLS_CD_sampled.tif
+[OBTAIN]   Crown density (sampled)                Clip_DNST_CD_sampled.tif
+[OBTAIN]   KOFTR forest-type group                KOFTR_INT.tif
+
+<Polygon>
+[OBTAIN]   NIFS Imsang forest-type                imsang_merge.gdb\merge   (feature class: merge)
+
+# Smoke test: `python test/smoke_test.py` validates the modeling inputs + plot-disjoint pipeline
+# when the cleaned table is present; it SKIPS (does not fail) if the non-redistributable data is absent.

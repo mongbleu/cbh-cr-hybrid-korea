@@ -1,0 +1,76 @@
+# ============================================================
+# CBH repo .gitignore — keep code + configs + small results;
+# exclude multi-GB rasters, raw NFI data, and scratch.
+# Bulky inputs live in the data archive (F:\CBH); see rules/reproducibility.md.
+# ============================================================
+
+# --- Large rasters / geodata (tens of GB) ---
+*.tif
+*.tif.ovr
+*.tif.aux.xml
+*.tfw
+*.gdb/
+*.img
+
+# --- Raw / large tabular data ---
+# Root data/ only (NOT test/data/, which holds shippable reference tables). Anchored with leading slash.
+/data/
+*.xlsx
+*.xls
+*.mdb
+*.parquet
+# Non-redistributable NFI-derived cleaned input that lives under test/data/ (license: not shareable)
+test/data/NFI-Integrated*.csv
+test/data/NFI*cleaned*.csv
+
+# --- Map outputs (regenerate via mapping stage) ---
+result/**/*.tif
+result/CBH_meter.tif
+result/CR.tif
+
+# --- Large regenerable per-tree prediction dumps (keep small metric tables like Evaluation_*.csv) ---
+*combined*.csv
+*Hybrid-Results*.csv
+*SampledImsang*.csv
+
+# --- Large logs ---
+src/log*.txt
+*.log
+
+# --- Office / binary docs ---
+*.pptx
+*.doc
+*.docx
+*.hwp
+*.pdf
+
+# --- Build artifacts / packaged bundles (regenerate; don't commit to the code repo) ---
+*.zip
+
+# --- Notebook / Python scratch ---
+.ipynb_checkpoints/
+.virtual_documents/
+__pycache__/
+*.pyc
+Untitled*.ipynb
+*temp*.ipynb
+*-temp.ipynb
+
+# --- Excel lock files ---
+~$*
+
+# --- Internal Claude / agent-team working files (kept local, not published) ---
+.claude/
+CLAUDE.md
+memory/
+TASKS.md
+
+# --- Editor / IDE workspace scratch ---
+*.code-workspace
+
+# --- Secrets ---
+.env
+*NOTION_TOKEN*
+.claude/settings.local.json
+wp_b4_run.log
+log_Prediction.txt
