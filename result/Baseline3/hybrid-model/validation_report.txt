@@ -1,0 +1,41 @@
+==============================================================================
+WP-B-6 VALIDATION GATE — plot-disjoint CBH/CR maps + category table + box-plots
+==============================================================================
+
+1) PROVENANCE — plot-disjoint carry-through
+  [PASS] bundle mode is plot-disjoint ('plot', not 'tree') — mode='plot'
+  [PASS] bundle SEED == 100 — SEED=100
+  [PASS] bundle covers 39 SIDs — 39 classes
+
+2) UNITS / CRS / RANGES
+  [PASS] CR CRS == EPSG:5179 — EPSG:5179
+  [PASS] CR grid == 5 m — res=(5.0, 5.0)
+  [PASS] CR min >= 0.0 — min=0.0312
+  [PASS] CR max <= 1.0 — max=1.0000
+     CR: min=0.0312 max=1.0000 mean=0.5180 std=0.1008
+  [PASS] CBH(m) CRS == EPSG:5179 — EPSG:5179
+  [PASS] CBH(m) grid == 5 m — res=(5.0, 5.0)
+  [PASS] CBH(m) min >= 0.0 — min=0.0000
+  [PASS] CBH(m) max <= 40.0 — max=27.4305
+     CBH(m): min=0.0000 max=27.4305 mean=6.9206 std=2.7841
+
+3) HONEST PERFORMANCE LANGUAGE — pred(mean) vs NIFS reference, by category
+   pooled over 114 categories: bias=+0.609 m, MAE=1.338 m, RMSE=1.721 m (prediction reads HIGH vs NIFS)
+   by DBH class:
+     DBH class 1: n=36  bias=+1.32 m  mae=1.71 m
+     DBH class 2: n=44  bias=+0.26 m  mae=1.15 m
+     DBH class 3: n=34  bias=+0.31 m  mae=1.19 m
+   by Age class:
+     Age class 2: n= 7  bias=+1.21 m  mae=1.56 m
+     Age class 3: n=18  bias=+0.28 m  mae=1.59 m
+     Age class 4: n=27  bias=+0.87 m  mae=1.27 m
+     Age class 5: n=25  bias=+0.51 m  mae=1.06 m
+     Age class 6: n=15  bias=+0.67 m  mae=1.13 m
+     Age class 7: n= 8  bias=+1.58 m  mae=1.76 m
+     Age class 8: n= 8  bias=-0.14 m  mae=1.85 m
+     Age class 9: n= 6  bias=-0.32 m  mae=1.06 m
+  [PASS] bias quantified & non-trivial (reported, not hidden) — pooled bias +0.61 m — must be stated in the manuscript, not called 'good'
+
+------------------------------------------------------------------------------
+GATE RESULT: 12/12 checks passed, 0 failed
+VERDICT: PASS — ready for immutable snapshot

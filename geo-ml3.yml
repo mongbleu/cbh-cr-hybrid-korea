@@ -1,0 +1,40 @@
+name: geo-ml3
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  # 기본 데이터 분석
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scipy
+  - scikit-learn
+  - joblib
+  - tqdm
+  - optuna
+  # 공간 데이터
+  - geopandas
+  - fiona
+  - rasterio
+  - shapely
+  - pyproj
+  - gdal
+  - contextily
+  # GPU 연산 (CUDA 12.x)
+  - cupy=13.*
+  - cuda-version=12.6
+
+  # 시각화 관련
+  - matplotlib-base
+  - matplotlib-inline
+  - ipywidgets
+  - jupyter
+  - jupyterlab
+  - ipykernel
+  # 추가 유틸
+  - shap
+  - pip:
+      - xgboost==2.1.4

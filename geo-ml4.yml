@@ -1,0 +1,42 @@
+name: geo-ml4
+channels:
+  - conda-forge
+
+dependencies:
+  # ---- Core ----
+  - python=3.9
+  - pip
+
+  # ---- GPU / CUDA ----
+  - cupy=13.*
+  - cuda-version=12.6
+
+  # ---- Geospatial stack ----
+  - gdal
+  - fiona
+  - shapely
+  - pyproj
+  - proj
+  - geopandas
+  - rasterio
+  - rtree
+
+  # ---- Data / ML (conda) ----
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - joblib
+  - shap
+
+  # ---- Viz / Notebook ----
+  - matplotlib
+  - seaborn
+  - ipywidgets
+  - jupyter
+  - jupyterlab
+  - ipykernel
+
+  # ---- Pip-only pins ----
+  - pip:
+      - xgboost==2.1.4

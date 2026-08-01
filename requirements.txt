@@ -1,0 +1,57 @@
+# Scientific stack
+numpy
+scipy
+pandas
+matplotlib
+seaborn
+scikit-learn
+
+# Deep learning
+tensorflow==2.12.0
+keras
+
+# Jupyter support
+ipykernel
+jupyterlab
+ipywidgets
+jupyterlab-git
+python-lsp-server
+ipyleaflet # interative geospatial maps inside jupyter
+black
+isort
+
+# Spatial analysis
+geopandas
+rasterio
+shapely
+fiona
+pyproj
+rasterstats
+pyogrio
+mapclassify
+
+# deployment
+mlflow
+typer
+
+# tree-based model
+xgboost
+lightgbm
+catboost
+
+# tuning & explainability
+shap
+lime
+
+# utility
+tqdm
+dask
+joblib
+click
+
+# File IO and formats
+openpyxl
+pyyaml
+
+# Geo-stack handled by conda:
+# gdal, rasterio, geopandas, shapely, pygeos, nb_conda_kernels
