@@ -1,0 +1,71 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite both the software and the associated paper."
+title: "CBH-CR hybrid model: crown base height and crown ratio for Korean forests from NFI data"
+abstract: >-
+  A hybrid allometric (Hasenauer–Monserud) + machine-learning (XGBoost) pipeline that predicts
+  crown base height (CBH) and crown ratio (CR) for tree species in the Republic of Korea from
+  National Forest Inventory data, with plot-disjoint cross-validation, and produces nationwide
+  5 m CBH/CR maps.
+type: software
+authors:
+  # ORCIDs added for Jo, Roh, Lee (confirmed); Jeong, M. Kim, S. Kim pending.
+  - given-names: "Yujeong"
+    family-names: "Jeong"
+    affiliation: "National Institute for Green Technology (NIGT), Seoul, Republic of Korea"
+  - given-names: "Hyun-Woo"
+    family-names: "Jo"
+    affiliation: "OJEong Resilience Institute (OJERI), Korea University, Seoul, Republic of Korea; International Institute for Applied Systems Analysis (IIASA), Laxenburg, Austria"
+    orcid: "https://orcid.org/0000-0001-6127-883X"
+  - given-names: "Monil"
+    family-names: "Kim"
+    affiliation: "Division of ICT Convergence, Pyeongtaek University, Republic of Korea"
+  - given-names: "Minwoo"
+    family-names: "Roh"
+    affiliation: "Division of ICT Convergence, Pyeongtaek University, Republic of Korea; OJEong Resilience Institute (OJERI), Korea University, Seoul, Republic of Korea"
+    orcid: "https://orcid.org/0000-0003-0815-3469"
+  - given-names: "Sunwoo"
+    family-names: "Kim"
+    affiliation: "Department of Environmental Science and Ecological Engineering, Korea University, Seoul, Republic of Korea"
+  - given-names: "Woo-Kyun"
+    family-names: "Lee"
+    affiliation: "OJEong Resilience Institute (OJERI) & Department of Environmental Science and Ecological Engineering, Korea University, Seoul, Republic of Korea"
+    orcid: "https://orcid.org/0000-0002-2188-359X"
+    email: "leewk@korea.ac.kr"
+license: MIT
+repository-code: "https://github.com/mongbleu/cbh-cr-hybrid-korea"
+version: "2.0"
+date-released: "2026-08-01"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21730483"
+    description: "Concept DOI (all versions) on Zenodo"
+  - type: doi
+    value: "10.5281/zenodo.21730751"
+    description: "Version 2 DOI on Zenodo"
+keywords:
+  - crown base height
+  - crown ratio
+  - forest inventory
+  - allometric model
+  - XGBoost
+  - plot-disjoint cross-validation
+preferred-citation:
+  type: article
+  title: "A Hybrid Allometric-Machine Learning Model for Crown Base Height Prediction in the Republic of Korea"
+  journal: "Ecological Informatics"
+  notes: "Manuscript ECOINF-D-25-04526 (in revision)."
+  year: 2026
+  doi: ""                  # TODO: article DOI when assigned
+  authors:
+    - given-names: "Yujeong"
+      family-names: "Jeong"
+    - given-names: "Hyun-Woo"
+      family-names: "Jo"
+    - given-names: "Monil"
+      family-names: "Kim"
+    - given-names: "Minwoo"
+      family-names: "Roh"
+    - given-names: "Sunwoo"
+      family-names: "Kim"
+    - given-names: "Woo-Kyun"
+      family-names: "Lee"

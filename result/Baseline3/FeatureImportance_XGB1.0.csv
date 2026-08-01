@@ -1,0 +1,12 @@
+Feature,Importance
+Height(ft),0.060487486
+DBH(inch),0.06186707
+CD(%),0.072175965
+Elev(hm),0.07594588
+Slope(tan),0.06929345
+Azimuth(rad),0.03882501
+Species,0.08085629
+Latitude,0.08485266
+Longitude,0.07910616
+"Allometric
+Prediction",0.3765901
